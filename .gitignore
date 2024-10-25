@@ -1,0 +1,15 @@
+# Ignore Python virtual environment and environment files
+venv/
+.env
+
+# Ignore Terraform state files
+*.tfstate
+*.tfstate.backup
+
+# Ignore log files and temporary files
+*.log
+*.tmp
+
+# Ignore AWS key pairs or other sensitive keys
+*.pem
+

@@ -1,0 +1,1394 @@
+[2024-10-19 00:13:54 +0000] [2508] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 00:13:54 +0000] [2508] [INFO] Listening at: unix:peak.sock (2508)
+[2024-10-19 00:13:54 +0000] [2508] [INFO] Using worker: sync
+[2024-10-19 00:13:54 +0000] [2509] [INFO] Booting worker with pid: 2509
+[2024-10-19 00:13:54 +0000] [2510] [INFO] Booting worker with pid: 2510
+[2024-10-19 00:13:54 +0000] [2511] [INFO] Booting worker with pid: 2511
+[2024-10-19 00:15:06 +0000] [2554] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 00:15:06 +0000] [2554] [INFO] Listening at: unix:peak2.sock (2554)
+[2024-10-19 00:15:06 +0000] [2554] [INFO] Using worker: sync
+[2024-10-19 00:15:06 +0000] [2556] [INFO] Booting worker with pid: 2556
+[2024-10-19 00:15:06 +0000] [2557] [INFO] Booting worker with pid: 2557
+[2024-10-19 00:15:06 +0000] [2558] [INFO] Booting worker with pid: 2558
+[2024-10-19 00:15:45 +0000] [2556] [INFO] Worker exiting (pid: 2556)
+[2024-10-19 00:15:45 +0000] [2554] [INFO] Handling signal: term
+[2024-10-19 00:15:45 +0000] [2557] [INFO] Worker exiting (pid: 2557)
+[2024-10-19 00:15:45 +0000] [2558] [INFO] Worker exiting (pid: 2558)
+[2024-10-19 00:15:45 +0000] [2554] [ERROR] Worker (pid:2556) was sent SIGTERM!
+[2024-10-19 00:15:45 +0000] [2554] [INFO] Shutting down: Master
+[2024-10-19 00:27:11 +0000] [2508] [INFO] Handling signal: term
+[2024-10-19 00:27:11 +0000] [2510] [INFO] Worker exiting (pid: 2510)
+[2024-10-19 00:27:11 +0000] [2511] [INFO] Worker exiting (pid: 2511)
+[2024-10-19 00:27:11 +0000] [2509] [INFO] Worker exiting (pid: 2509)
+[2024-10-19 00:27:11 +0000] [2508] [INFO] Shutting down: Master
+[2024-10-19 00:27:11 +0000] [2746] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 00:27:11 +0000] [2746] [INFO] Listening at: unix:peak.sock (2746)
+[2024-10-19 00:27:11 +0000] [2746] [INFO] Using worker: sync
+[2024-10-19 00:27:11 +0000] [2749] [INFO] Booting worker with pid: 2749
+[2024-10-19 00:27:12 +0000] [2750] [INFO] Booting worker with pid: 2750
+[2024-10-19 00:27:12 +0000] [2749] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 6, in <module>
+    @app.before_first_request
+     ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Flask' object has no attribute 'before_first_request'. Did you mean: '_got_first_request'?
+[2024-10-19 00:27:12 +0000] [2749] [INFO] Worker exiting (pid: 2749)
+[2024-10-19 00:27:12 +0000] [2751] [INFO] Booting worker with pid: 2751
+[2024-10-19 00:27:12 +0000] [2746] [ERROR] Worker (pid:2749) exited with code 3
+[2024-10-19 00:27:12 +0000] [2750] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 6, in <module>
+    @app.before_first_request
+     ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Flask' object has no attribute 'before_first_request'. Did you mean: '_got_first_request'?
+[2024-10-19 00:27:12 +0000] [2750] [INFO] Worker exiting (pid: 2750)
+[2024-10-19 00:27:12 +0000] [2746] [ERROR] Worker (pid:2750) exited with code 3
+[2024-10-19 00:27:12 +0000] [2751] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 6, in <module>
+    @app.before_first_request
+     ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Flask' object has no attribute 'before_first_request'. Did you mean: '_got_first_request'?
+[2024-10-19 00:27:12 +0000] [2751] [INFO] Worker exiting (pid: 2751)
+[2024-10-19 00:32:54 +0000] [2822] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 00:32:54 +0000] [2822] [INFO] Listening at: unix:peak.sock (2822)
+[2024-10-19 00:32:54 +0000] [2822] [INFO] Using worker: sync
+[2024-10-19 00:32:54 +0000] [2823] [INFO] Booting worker with pid: 2823
+[2024-10-19 00:32:54 +0000] [2824] [INFO] Booting worker with pid: 2824
+[2024-10-19 00:32:54 +0000] [2823] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 7, in <module>
+    @app.before_first_request
+     ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Flask' object has no attribute 'before_first_request'. Did you mean: '_got_first_request'?
+[2024-10-19 00:32:54 +0000] [2823] [INFO] Worker exiting (pid: 2823)
+[2024-10-19 00:32:54 +0000] [2825] [INFO] Booting worker with pid: 2825
+[2024-10-19 00:32:54 +0000] [2822] [ERROR] Worker (pid:2823) exited with code 3
+[2024-10-19 00:32:54 +0000] [2824] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 7, in <module>
+    @app.before_first_request
+     ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Flask' object has no attribute 'before_first_request'. Did you mean: '_got_first_request'?
+[2024-10-19 00:32:54 +0000] [2824] [INFO] Worker exiting (pid: 2824)
+[2024-10-19 00:32:55 +0000] [2822] [ERROR] Worker (pid:2824) exited with code 3
+[2024-10-19 00:32:55 +0000] [2825] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 7, in <module>
+    @app.before_first_request
+     ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Flask' object has no attribute 'before_first_request'. Did you mean: '_got_first_request'?
+[2024-10-19 00:32:55 +0000] [2825] [INFO] Worker exiting (pid: 2825)
+[2024-10-19 00:37:22 +0000] [2878] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 00:37:22 +0000] [2878] [INFO] Listening at: unix:peak.sock (2878)
+[2024-10-19 00:37:22 +0000] [2878] [INFO] Using worker: sync
+[2024-10-19 00:37:22 +0000] [2879] [INFO] Booting worker with pid: 2879
+[2024-10-19 00:37:22 +0000] [2880] [INFO] Booting worker with pid: 2880
+[2024-10-19 00:37:22 +0000] [2881] [INFO] Booting worker with pid: 2881
+[2024-10-19 00:37:22 +0000] [2879] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 18, in <module>
+    @app.before_first_request
+     ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Flask' object has no attribute 'before_first_request'. Did you mean: '_got_first_request'?
+[2024-10-19 00:37:22 +0000] [2879] [INFO] Worker exiting (pid: 2879)
+[2024-10-19 00:37:22 +0000] [2880] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 18, in <module>
+    @app.before_first_request
+     ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Flask' object has no attribute 'before_first_request'. Did you mean: '_got_first_request'?
+[2024-10-19 00:37:22 +0000] [2880] [INFO] Worker exiting (pid: 2880)
+[2024-10-19 00:37:22 +0000] [2881] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 18, in <module>
+    @app.before_first_request
+     ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Flask' object has no attribute 'before_first_request'. Did you mean: '_got_first_request'?
+[2024-10-19 00:37:22 +0000] [2881] [INFO] Worker exiting (pid: 2881)
+[2024-10-19 00:37:22 +0000] [2878] [ERROR] Worker (pid:2879) exited with code 3
+[2024-10-19 00:37:22 +0000] [2878] [ERROR] Worker (pid:2881) was sent SIGTERM!
+[2024-10-19 00:37:22 +0000] [2878] [ERROR] Worker (pid:2880) was sent SIGTERM!
+[2024-10-19 00:37:22 +0000] [2878] [ERROR] Shutting down: Master
+[2024-10-19 00:37:22 +0000] [2878] [ERROR] Reason: Worker failed to boot.
+[2024-10-19 00:39:55 +0000] [2904] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 00:39:55 +0000] [2904] [INFO] Listening at: unix:peak.sock (2904)
+[2024-10-19 00:39:55 +0000] [2904] [INFO] Using worker: sync
+[2024-10-19 00:39:55 +0000] [2905] [INFO] Booting worker with pid: 2905
+[2024-10-19 00:39:55 +0000] [2906] [INFO] Booting worker with pid: 2906
+[2024-10-19 00:39:55 +0000] [2907] [INFO] Booting worker with pid: 2907
+[2024-10-19 00:46:13 +0000] [2904] [INFO] Handling signal: term
+[2024-10-19 00:46:13 +0000] [2905] [INFO] Worker exiting (pid: 2905)
+[2024-10-19 00:46:13 +0000] [2906] [INFO] Worker exiting (pid: 2906)
+[2024-10-19 00:46:13 +0000] [2907] [INFO] Worker exiting (pid: 2907)
+[2024-10-19 00:46:13 +0000] [2904] [INFO] Shutting down: Master
+[2024-10-19 00:46:13 +0000] [3038] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 00:46:13 +0000] [3038] [INFO] Listening at: unix:peak.sock (3038)
+[2024-10-19 00:46:13 +0000] [3038] [INFO] Using worker: sync
+[2024-10-19 00:46:13 +0000] [3040] [INFO] Booting worker with pid: 3040
+[2024-10-19 00:46:13 +0000] [3040] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 18
+    setup_logging()  # Call the logging setup function
+                                                      ^
+IndentationError: unindent does not match any outer indentation level
+[2024-10-19 00:46:13 +0000] [3040] [INFO] Worker exiting (pid: 3040)
+[2024-10-19 00:46:13 +0000] [3038] [ERROR] Worker (pid:3040) exited with code 3
+[2024-10-19 00:46:13 +0000] [3038] [ERROR] Shutting down: Master
+[2024-10-19 00:46:13 +0000] [3038] [ERROR] Reason: Worker failed to boot.
+[2024-10-19 00:47:05 +0000] [3068] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 00:47:05 +0000] [3068] [INFO] Listening at: unix:peak.sock (3068)
+[2024-10-19 00:47:05 +0000] [3068] [INFO] Using worker: sync
+[2024-10-19 00:47:05 +0000] [3069] [INFO] Booting worker with pid: 3069
+[2024-10-19 00:47:05 +0000] [3070] [INFO] Booting worker with pid: 3070
+[2024-10-19 00:47:06 +0000] [3071] [INFO] Booting worker with pid: 3071
+[2024-10-19 00:49:27 +0000] [3069] [INFO] Worker exiting (pid: 3069)
+[2024-10-19 00:49:27 +0000] [3070] [INFO] Worker exiting (pid: 3070)
+[2024-10-19 00:49:27 +0000] [3071] [INFO] Worker exiting (pid: 3071)
+[2024-10-19 00:49:27 +0000] [3068] [INFO] Handling signal: term
+[2024-10-19 00:49:27 +0000] [3068] [ERROR] Worker (pid:3070) was sent SIGTERM!
+[2024-10-19 00:49:27 +0000] [3068] [ERROR] Worker (pid:3071) was sent SIGTERM!
+[2024-10-19 00:49:27 +0000] [3068] [ERROR] Worker (pid:3069) was sent SIGTERM!
+[2024-10-19 00:49:27 +0000] [3068] [INFO] Shutting down: Master
+[2024-10-19 00:49:27 +0000] [3101] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 00:49:27 +0000] [3101] [INFO] Listening at: unix:peak.sock (3101)
+[2024-10-19 00:49:27 +0000] [3101] [INFO] Using worker: sync
+[2024-10-19 00:49:27 +0000] [3102] [INFO] Booting worker with pid: 3102
+[2024-10-19 00:49:28 +0000] [3103] [INFO] Booting worker with pid: 3103
+[2024-10-19 00:49:28 +0000] [3104] [INFO] Booting worker with pid: 3104
+[2024-10-19 00:54:18 +0000] [3101] [INFO] Handling signal: term
+[2024-10-19 00:54:18 +0000] [3102] [INFO] Worker exiting (pid: 3102)
+[2024-10-19 00:54:18 +0000] [3103] [INFO] Worker exiting (pid: 3103)
+[2024-10-19 00:54:18 +0000] [3104] [INFO] Worker exiting (pid: 3104)
+[2024-10-19 00:54:18 +0000] [3101] [ERROR] Worker (pid:3102) was sent SIGTERM!
+[2024-10-19 00:54:18 +0000] [3101] [INFO] Shutting down: Master
+[2024-10-19 00:54:19 +0000] [3198] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 00:54:19 +0000] [3198] [INFO] Listening at: unix:peak.sock (3198)
+[2024-10-19 00:54:19 +0000] [3198] [INFO] Using worker: sync
+[2024-10-19 00:54:19 +0000] [3200] [INFO] Booting worker with pid: 3200
+[2024-10-19 00:54:19 +0000] [3201] [INFO] Booting worker with pid: 3201
+[2024-10-19 00:54:19 +0000] [3202] [INFO] Booting worker with pid: 3202
+[2024-10-19 00:56:14 +0000] [3198] [INFO] Handling signal: term
+[2024-10-19 00:56:14 +0000] [3200] [INFO] Worker exiting (pid: 3200)
+[2024-10-19 00:56:14 +0000] [3201] [INFO] Worker exiting (pid: 3201)
+[2024-10-19 00:56:14 +0000] [3202] [INFO] Worker exiting (pid: 3202)
+[2024-10-19 00:56:14 +0000] [3198] [INFO] Shutting down: Master
+[2024-10-19 00:56:14 +0000] [3229] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 00:56:14 +0000] [3229] [INFO] Listening at: unix:peak.sock (3229)
+[2024-10-19 00:56:14 +0000] [3229] [INFO] Using worker: sync
+[2024-10-19 00:56:14 +0000] [3230] [INFO] Booting worker with pid: 3230
+[2024-10-19 00:56:14 +0000] [3231] [INFO] Booting worker with pid: 3231
+[2024-10-19 00:56:15 +0000] [3232] [INFO] Booting worker with pid: 3232
+[2024-10-19 01:02:55 +0000] [3230] [INFO] Worker exiting (pid: 3230)
+[2024-10-19 01:02:55 +0000] [3229] [INFO] Handling signal: term
+[2024-10-19 01:02:55 +0000] [3231] [INFO] Worker exiting (pid: 3231)
+[2024-10-19 01:02:55 +0000] [3232] [INFO] Worker exiting (pid: 3232)
+[2024-10-19 01:02:55 +0000] [3229] [ERROR] Worker (pid:3230) was sent SIGTERM!
+[2024-10-19 01:02:55 +0000] [3229] [INFO] Shutting down: Master
+[2024-10-19 01:02:55 +0000] [3386] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 01:02:55 +0000] [3386] [INFO] Listening at: unix:peak.sock (3386)
+[2024-10-19 01:02:55 +0000] [3386] [INFO] Using worker: sync
+[2024-10-19 01:02:55 +0000] [3388] [INFO] Booting worker with pid: 3388
+[2024-10-19 01:02:55 +0000] [3389] [INFO] Booting worker with pid: 3389
+[2024-10-19 01:02:55 +0000] [3390] [INFO] Booting worker with pid: 3390
+[2024-10-19 01:02:55 +0000] [3388] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 19, in <module>
+    setup_logging()
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 10, in setup_logging
+    log_file_path = os.path.join(app.root_path, 'flaskapp.log')
+                    ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'
+[2024-10-19 01:02:55 +0000] [3388] [INFO] Worker exiting (pid: 3388)
+[2024-10-19 01:02:56 +0000] [3386] [ERROR] Worker (pid:3388) exited with code 3
+[2024-10-19 01:02:56 +0000] [3389] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 19, in <module>
+    setup_logging()
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 10, in setup_logging
+    log_file_path = os.path.join(app.root_path, 'flaskapp.log')
+                    ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'
+[2024-10-19 01:02:56 +0000] [3389] [INFO] Worker exiting (pid: 3389)
+[2024-10-19 01:02:56 +0000] [3390] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 19, in <module>
+    setup_logging()
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 10, in setup_logging
+    log_file_path = os.path.join(app.root_path, 'flaskapp.log')
+                    ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'
+[2024-10-19 01:02:56 +0000] [3390] [INFO] Worker exiting (pid: 3390)
+[2024-10-19 01:02:56 +0000] [3386] [ERROR] Worker (pid:3389) exited with code 3
+[2024-10-19 01:03:10 +0000] [3396] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 01:03:10 +0000] [3396] [INFO] Listening at: unix:peak.sock (3396)
+[2024-10-19 01:03:10 +0000] [3396] [INFO] Using worker: sync
+[2024-10-19 01:03:10 +0000] [3397] [INFO] Booting worker with pid: 3397
+[2024-10-19 01:03:10 +0000] [3398] [INFO] Booting worker with pid: 3398
+[2024-10-19 01:03:10 +0000] [3399] [INFO] Booting worker with pid: 3399
+[2024-10-19 01:03:10 +0000] [3397] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 19, in <module>
+    setup_logging()
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 10, in setup_logging
+    log_file_path = os.path.join(app.root_path, 'flaskapp.log')
+                    ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'
+[2024-10-19 01:03:10 +0000] [3397] [INFO] Worker exiting (pid: 3397)
+[2024-10-19 01:03:10 +0000] [3396] [ERROR] Worker (pid:3397) exited with code 3
+[2024-10-19 01:03:10 +0000] [3398] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 19, in <module>
+    setup_logging()
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 10, in setup_logging
+    log_file_path = os.path.join(app.root_path, 'flaskapp.log')
+                    ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'
+[2024-10-19 01:03:10 +0000] [3398] [INFO] Worker exiting (pid: 3398)
+[2024-10-19 01:03:10 +0000] [3399] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 19, in <module>
+    setup_logging()
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 10, in setup_logging
+    log_file_path = os.path.join(app.root_path, 'flaskapp.log')
+                    ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'
+[2024-10-19 01:03:10 +0000] [3399] [INFO] Worker exiting (pid: 3399)
+[2024-10-19 01:03:10 +0000] [3396] [ERROR] Worker (pid:3398) exited with code 3
+[2024-10-19 01:03:42 +0000] [3444] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 01:03:42 +0000] [3444] [INFO] Listening at: unix:peak.sock (3444)
+[2024-10-19 01:03:42 +0000] [3444] [INFO] Using worker: sync
+[2024-10-19 01:03:42 +0000] [3445] [INFO] Booting worker with pid: 3445
+[2024-10-19 01:03:42 +0000] [3446] [INFO] Booting worker with pid: 3446
+[2024-10-19 01:03:42 +0000] [3447] [INFO] Booting worker with pid: 3447
+[2024-10-19 01:08:55 +0000] [3445] [INFO] Worker exiting (pid: 3445)
+[2024-10-19 01:08:55 +0000] [3446] [INFO] Worker exiting (pid: 3446)
+[2024-10-19 01:08:55 +0000] [3447] [INFO] Worker exiting (pid: 3447)
+[2024-10-19 01:08:55 +0000] [3444] [INFO] Handling signal: term
+[2024-10-19 01:08:55 +0000] [3444] [ERROR] Worker (pid:3447) was sent SIGTERM!
+[2024-10-19 01:08:55 +0000] [3444] [ERROR] Worker (pid:3445) was sent SIGTERM!
+[2024-10-19 01:08:55 +0000] [3444] [ERROR] Worker (pid:3446) was sent SIGTERM!
+[2024-10-19 01:08:56 +0000] [3444] [INFO] Shutting down: Master
+[2024-10-19 01:08:56 +0000] [3507] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 01:08:56 +0000] [3507] [INFO] Listening at: unix:peak.sock (3507)
+[2024-10-19 01:08:56 +0000] [3507] [INFO] Using worker: sync
+[2024-10-19 01:08:56 +0000] [3510] [INFO] Booting worker with pid: 3510
+[2024-10-19 01:08:56 +0000] [3510] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 18
+    app.logger.addHandler(handler)
+    ^^^
+IndentationError: expected an indented block after 'if' statement on line 17
+[2024-10-19 01:08:56 +0000] [3510] [INFO] Worker exiting (pid: 3510)
+[2024-10-19 01:08:56 +0000] [3507] [ERROR] Worker (pid:3510) exited with code 3
+[2024-10-19 01:08:56 +0000] [3507] [ERROR] Shutting down: Master
+[2024-10-19 01:08:56 +0000] [3507] [ERROR] Reason: Worker failed to boot.
+[2024-10-19 01:10:45 +0000] [3582] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 01:10:45 +0000] [3582] [INFO] Listening at: unix:peak.sock (3582)
+[2024-10-19 01:10:45 +0000] [3582] [INFO] Using worker: sync
+[2024-10-19 01:10:45 +0000] [3583] [INFO] Booting worker with pid: 3583
+[2024-10-19 01:10:45 +0000] [3584] [INFO] Booting worker with pid: 3584
+[2024-10-19 01:10:45 +0000] [3585] [INFO] Booting worker with pid: 3585
+[2024-10-19 01:18:58 +0000] [3583] [INFO] Worker exiting (pid: 3583)
+[2024-10-19 01:18:58 +0000] [3584] [INFO] Worker exiting (pid: 3584)
+[2024-10-19 01:18:58 +0000] [3585] [INFO] Worker exiting (pid: 3585)
+[2024-10-19 01:18:58 +0000] [3582] [INFO] Handling signal: term
+[2024-10-19 01:18:58 +0000] [3582] [ERROR] Worker (pid:3583) was sent SIGTERM!
+[2024-10-19 01:18:58 +0000] [3582] [ERROR] Worker (pid:3585) was sent SIGTERM!
+[2024-10-19 01:18:58 +0000] [3582] [ERROR] Worker (pid:3584) was sent SIGTERM!
+[2024-10-19 01:18:58 +0000] [3582] [INFO] Shutting down: Master
+[2024-10-19 01:18:59 +0000] [3646] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 01:18:59 +0000] [3646] [INFO] Listening at: unix:peak.sock (3646)
+[2024-10-19 01:18:59 +0000] [3646] [INFO] Using worker: sync
+[2024-10-19 01:18:59 +0000] [3647] [INFO] Booting worker with pid: 3647
+[2024-10-19 01:18:59 +0000] [3648] [INFO] Booting worker with pid: 3648
+[2024-10-19 01:18:59 +0000] [3649] [INFO] Booting worker with pid: 3649
+[2024-10-19 01:18:59 +0000] [3647] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 5, in <module>
+    logging.basicConfig(filename='flaskapp.log', format="%(levelname)s:%(name)s:%(message)s")
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flask.logging' has no attribute 'basicConfig'
+[2024-10-19 01:18:59 +0000] [3647] [INFO] Worker exiting (pid: 3647)
+[2024-10-19 01:18:59 +0000] [3646] [ERROR] Worker (pid:3647) exited with code 3
+[2024-10-19 01:18:59 +0000] [3648] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 5, in <module>
+    logging.basicConfig(filename='flaskapp.log', format="%(levelname)s:%(name)s:%(message)s")
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flask.logging' has no attribute 'basicConfig'
+[2024-10-19 01:18:59 +0000] [3648] [INFO] Worker exiting (pid: 3648)
+[2024-10-19 01:18:59 +0000] [3649] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 5, in <module>
+    logging.basicConfig(filename='flaskapp.log', format="%(levelname)s:%(name)s:%(message)s")
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flask.logging' has no attribute 'basicConfig'
+[2024-10-19 01:18:59 +0000] [3649] [INFO] Worker exiting (pid: 3649)
+[2024-10-19 01:18:59 +0000] [3646] [ERROR] Worker (pid:3648) exited with code 3
+[2024-10-19 01:21:03 +0000] [3689] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 01:21:03 +0000] [3689] [INFO] Listening at: unix:peak.sock (3689)
+[2024-10-19 01:21:03 +0000] [3689] [INFO] Using worker: sync
+[2024-10-19 01:21:03 +0000] [3690] [INFO] Booting worker with pid: 3690
+[2024-10-19 01:21:03 +0000] [3691] [INFO] Booting worker with pid: 3691
+[2024-10-19 01:21:03 +0000] [3692] [INFO] Booting worker with pid: 3692
+[2024-10-19 01:21:03 +0000] [3690] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 5, in <module>
+    logging.basicConfig(filename='flaskapp.log', format="%(levelname)s:%(name)s:%(message)s")
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flask.logging' has no attribute 'basicConfig'
+[2024-10-19 01:21:03 +0000] [3690] [INFO] Worker exiting (pid: 3690)
+[2024-10-19 01:21:03 +0000] [3689] [ERROR] Worker (pid:3690) exited with code 3
+[2024-10-19 01:21:03 +0000] [3692] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 5, in <module>
+    logging.basicConfig(filename='flaskapp.log', format="%(levelname)s:%(name)s:%(message)s")
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flask.logging' has no attribute 'basicConfig'
+[2024-10-19 01:21:03 +0000] [3692] [INFO] Worker exiting (pid: 3692)
+[2024-10-19 01:21:03 +0000] [3691] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 5, in <module>
+    logging.basicConfig(filename='flaskapp.log', format="%(levelname)s:%(name)s:%(message)s")
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flask.logging' has no attribute 'basicConfig'
+[2024-10-19 01:21:03 +0000] [3691] [INFO] Worker exiting (pid: 3691)
+[2024-10-19 01:21:03 +0000] [3689] [ERROR] Worker (pid:3691) exited with code 3
+[2024-10-19 01:22:46 +0000] [3729] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 01:22:46 +0000] [3729] [INFO] Listening at: unix:peak.sock (3729)
+[2024-10-19 01:22:46 +0000] [3729] [INFO] Using worker: sync
+[2024-10-19 01:22:46 +0000] [3730] [INFO] Booting worker with pid: 3730
+[2024-10-19 01:22:46 +0000] [3731] [INFO] Booting worker with pid: 3731
+[2024-10-19 01:22:46 +0000] [3732] [INFO] Booting worker with pid: 3732
+[2024-10-19 01:22:46 +0000] [3730] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 5, in <module>
+    logging.basicConfig(filename='flaskapp2.log', format="%(levelname)s:%(name)s:%(message)s")
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flask.logging' has no attribute 'basicConfig'
+[2024-10-19 01:22:46 +0000] [3730] [INFO] Worker exiting (pid: 3730)
+[2024-10-19 01:22:46 +0000] [3731] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 5, in <module>
+    logging.basicConfig(filename='flaskapp2.log', format="%(levelname)s:%(name)s:%(message)s")
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flask.logging' has no attribute 'basicConfig'
+[2024-10-19 01:22:46 +0000] [3731] [INFO] Worker exiting (pid: 3731)
+[2024-10-19 01:22:46 +0000] [3732] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 5, in <module>
+    logging.basicConfig(filename='flaskapp2.log', format="%(levelname)s:%(name)s:%(message)s")
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flask.logging' has no attribute 'basicConfig'
+[2024-10-19 01:22:46 +0000] [3732] [INFO] Worker exiting (pid: 3732)
+[2024-10-19 01:22:46 +0000] [3729] [ERROR] Worker (pid:3730) exited with code 3
+[2024-10-19 01:22:46 +0000] [3729] [ERROR] Worker (pid:3731) was sent SIGTERM!
+[2024-10-19 01:22:46 +0000] [3729] [ERROR] Worker (pid:3732) was sent SIGTERM!
+[2024-10-19 01:22:46 +0000] [3729] [ERROR] Shutting down: Master
+[2024-10-19 01:22:46 +0000] [3729] [ERROR] Reason: Worker failed to boot.
+[2024-10-19 01:23:41 +0000] [3742] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 01:23:41 +0000] [3742] [INFO] Listening at: unix:peak.sock (3742)
+[2024-10-19 01:23:41 +0000] [3742] [INFO] Using worker: sync
+[2024-10-19 01:23:41 +0000] [3743] [INFO] Booting worker with pid: 3743
+[2024-10-19 01:23:41 +0000] [3744] [INFO] Booting worker with pid: 3744
+[2024-10-19 01:23:41 +0000] [3743] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 4, in <module>
+    logging.basicConfig(filename='flaskapp2.log', format="%(levelname)s:%(name)s:%(message)s")
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flask.logging' has no attribute 'basicConfig'
+[2024-10-19 01:23:41 +0000] [3743] [INFO] Worker exiting (pid: 3743)
+[2024-10-19 01:23:41 +0000] [3745] [INFO] Booting worker with pid: 3745
+[2024-10-19 01:23:41 +0000] [3742] [ERROR] Worker (pid:3743) exited with code 3
+[2024-10-19 01:23:41 +0000] [3744] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 4, in <module>
+    logging.basicConfig(filename='flaskapp2.log', format="%(levelname)s:%(name)s:%(message)s")
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flask.logging' has no attribute 'basicConfig'
+[2024-10-19 01:23:41 +0000] [3744] [INFO] Worker exiting (pid: 3744)
+[2024-10-19 01:23:41 +0000] [3742] [ERROR] Worker (pid:3744) exited with code 3
+[2024-10-19 01:23:41 +0000] [3745] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbradley/FlaskApp/flaskapp/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/rbradley/FlaskApp/hike/wsgi.py", line 1, in <module>
+    from peak import app
+  File "/home/rbradley/FlaskApp/hike/peak.py", line 4, in <module>
+    logging.basicConfig(filename='flaskapp2.log', format="%(levelname)s:%(name)s:%(message)s")
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'flask.logging' has no attribute 'basicConfig'
+[2024-10-19 01:23:41 +0000] [3745] [INFO] Worker exiting (pid: 3745)
+[2024-10-19 01:30:27 +0000] [3787] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 01:30:27 +0000] [3787] [INFO] Listening at: unix:peak.sock (3787)
+[2024-10-19 01:30:27 +0000] [3787] [INFO] Using worker: sync
+[2024-10-19 01:30:27 +0000] [3788] [INFO] Booting worker with pid: 3788
+[2024-10-19 01:30:27 +0000] [3789] [INFO] Booting worker with pid: 3789
+[2024-10-19 01:30:27 +0000] [3790] [INFO] Booting worker with pid: 3790
+[2024-10-19 01:33:03 +0000] [3787] [INFO] Handling signal: term
+[2024-10-19 01:33:03 +0000] [3789] [INFO] Worker exiting (pid: 3789)
+[2024-10-19 01:33:03 +0000] [3790] [INFO] Worker exiting (pid: 3790)
+[2024-10-19 01:33:03 +0000] [3788] [INFO] Worker exiting (pid: 3788)
+[2024-10-19 01:33:03 +0000] [3787] [INFO] Shutting down: Master
+[2024-10-19 01:33:03 +0000] [3829] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 01:33:03 +0000] [3829] [INFO] Listening at: unix:peak.sock (3829)
+[2024-10-19 01:33:03 +0000] [3829] [INFO] Using worker: sync
+[2024-10-19 01:33:03 +0000] [3831] [INFO] Booting worker with pid: 3831
+[2024-10-19 01:33:03 +0000] [3832] [INFO] Booting worker with pid: 3832
+[2024-10-19 01:33:03 +0000] [3833] [INFO] Booting worker with pid: 3833
+[2024-10-19 01:47:55 +0000] [3829] [INFO] Handling signal: term
+[2024-10-19 01:47:55 +0000] [3831] [INFO] Worker exiting (pid: 3831)
+[2024-10-19 01:47:55 +0000] [3833] [INFO] Worker exiting (pid: 3833)
+[2024-10-19 01:47:55 +0000] [3832] [INFO] Worker exiting (pid: 3832)
+[2024-10-19 01:47:55 +0000] [3829] [INFO] Shutting down: Master
+[2024-10-19 01:47:55 +0000] [3992] [INFO] Starting gunicorn 23.0.0
+[2024-10-19 01:47:55 +0000] [3992] [INFO] Listening at: unix:peak.sock (3992)
+[2024-10-19 01:47:55 +0000] [3992] [INFO] Using worker: sync
+[2024-10-19 01:47:55 +0000] [3993] [INFO] Booting worker with pid: 3993
+[2024-10-19 01:47:55 +0000] [3994] [INFO] Booting worker with pid: 3994
+[2024-10-19 01:47:55 +0000] [3995] [INFO] Booting worker with pid: 3995
+[2024-10-19 10:38:29 +0000] [3992] [INFO] Handling signal: term
+[2024-10-19 10:38:29 +0000] [3993] [INFO] Worker exiting (pid: 3993)
+[2024-10-19 10:38:29 +0000] [3994] [INFO] Worker exiting (pid: 3994)
+[2024-10-19 10:38:29 +0000] [3995] [INFO] Worker exiting (pid: 3995)
+[2024-10-19 10:38:29 +0000] [3992] [ERROR] Worker (pid:3994) was sent SIGTERM!
+[2024-10-19 10:38:29 +0000] [3992] [ERROR] Worker (pid:3995) was sent SIGTERM!
+[2024-10-19 10:38:29 +0000] [3992] [ERROR] Worker (pid:3993) was sent SIGTERM!
+[2024-10-19 10:38:29 +0000] [3992] [INFO] Shutting down: Master
+[2024-10-21 21:49:35 +0000] [535] [INFO] Starting gunicorn 23.0.0
+[2024-10-21 21:49:35 +0000] [535] [INFO] Listening at: unix:peak.sock (535)
+[2024-10-21 21:49:35 +0000] [535] [INFO] Using worker: sync
+[2024-10-21 21:49:35 +0000] [729] [INFO] Booting worker with pid: 729
+[2024-10-21 21:49:35 +0000] [747] [INFO] Booting worker with pid: 747
+[2024-10-21 21:49:35 +0000] [753] [INFO] Booting worker with pid: 753
+[2024-10-22 04:10:53 +0000] [747] [INFO] Worker exiting (pid: 747)
+[2024-10-22 04:10:53 +0000] [729] [INFO] Worker exiting (pid: 729)
+[2024-10-22 04:10:53 +0000] [535] [INFO] Handling signal: term
+[2024-10-22 04:10:53 +0000] [753] [INFO] Worker exiting (pid: 753)
+[2024-10-22 04:10:54 +0000] [535] [ERROR] Worker (pid:753) was sent SIGTERM!
+[2024-10-22 04:10:54 +0000] [535] [ERROR] Worker (pid:729) was sent SIGTERM!
+[2024-10-22 04:10:54 +0000] [535] [ERROR] Worker (pid:747) was sent SIGTERM!
+[2024-10-22 04:10:54 +0000] [535] [INFO] Shutting down: Master
+[2024-10-22 23:11:46 +0000] [537] [INFO] Starting gunicorn 23.0.0
+[2024-10-22 23:11:46 +0000] [537] [INFO] Listening at: unix:peak.sock (537)
+[2024-10-22 23:11:46 +0000] [537] [INFO] Using worker: sync
+[2024-10-22 23:11:46 +0000] [726] [INFO] Booting worker with pid: 726
+[2024-10-22 23:11:47 +0000] [731] [INFO] Booting worker with pid: 731
+[2024-10-22 23:11:47 +0000] [751] [INFO] Booting worker with pid: 751
+[2024-10-23 02:24:27 +0000] [537] [INFO] Handling signal: term
+[2024-10-23 02:24:27 +0000] [731] [INFO] Worker exiting (pid: 731)
+[2024-10-23 02:24:27 +0000] [751] [INFO] Worker exiting (pid: 751)
+[2024-10-23 02:24:27 +0000] [726] [INFO] Worker exiting (pid: 726)
+[2024-10-23 02:24:28 +0000] [537] [INFO] Shutting down: Master
+[2024-10-23 21:23:19 +0000] [548] [INFO] Starting gunicorn 23.0.0
+[2024-10-23 21:23:19 +0000] [548] [INFO] Listening at: unix:peak.sock (548)
+[2024-10-23 21:23:19 +0000] [548] [INFO] Using worker: sync
+[2024-10-23 21:23:19 +0000] [741] [INFO] Booting worker with pid: 741
+[2024-10-23 21:23:20 +0000] [751] [INFO] Booting worker with pid: 751
+[2024-10-23 21:23:20 +0000] [766] [INFO] Booting worker with pid: 766
+[2024-10-24 01:58:54 +0000] [741] [INFO] Worker exiting (pid: 741)
+[2024-10-24 01:58:54 +0000] [751] [INFO] Worker exiting (pid: 751)
+[2024-10-24 01:58:54 +0000] [548] [INFO] Handling signal: term
+[2024-10-24 01:58:54 +0000] [766] [INFO] Worker exiting (pid: 766)
+[2024-10-24 01:58:54 +0000] [548] [ERROR] Worker (pid:741) was sent SIGTERM!
+[2024-10-24 01:58:54 +0000] [548] [ERROR] Worker (pid:751) was sent SIGTERM!
+[2024-10-24 01:58:54 +0000] [548] [INFO] Shutting down: Master
+[2024-10-24 19:34:29 +0000] [546] [INFO] Starting gunicorn 23.0.0
+[2024-10-24 19:34:29 +0000] [546] [INFO] Listening at: unix:peak.sock (546)
+[2024-10-24 19:34:29 +0000] [546] [INFO] Using worker: sync
+[2024-10-24 19:34:29 +0000] [750] [INFO] Booting worker with pid: 750
+[2024-10-24 19:34:29 +0000] [763] [INFO] Booting worker with pid: 763
+[2024-10-24 19:34:29 +0000] [768] [INFO] Booting worker with pid: 768
+[2024-10-24 20:10:10 +0000] [763] [INFO] Worker exiting (pid: 763)
+[2024-10-24 20:10:10 +0000] [546] [INFO] Handling signal: term
+[2024-10-24 20:10:10 +0000] [750] [INFO] Worker exiting (pid: 750)
+[2024-10-24 20:10:10 +0000] [768] [INFO] Worker exiting (pid: 768)
+[2024-10-24 20:10:10 +0000] [546] [ERROR] Worker (pid:763) was sent SIGTERM!
+[2024-10-24 20:10:11 +0000] [546] [INFO] Shutting down: Master
+[2024-10-24 21:36:50 +0000] [551] [INFO] Starting gunicorn 23.0.0
+[2024-10-24 21:36:50 +0000] [551] [INFO] Listening at: unix:peak.sock (551)
+[2024-10-24 21:36:50 +0000] [551] [INFO] Using worker: sync
+[2024-10-24 21:36:50 +0000] [760] [INFO] Booting worker with pid: 760
+[2024-10-24 21:36:51 +0000] [769] [INFO] Booting worker with pid: 769
+[2024-10-24 21:36:51 +0000] [772] [INFO] Booting worker with pid: 772
+[2024-10-24 23:46:13 +0000] [772] [INFO] Worker exiting (pid: 772)
+[2024-10-24 23:46:13 +0000] [551] [INFO] Handling signal: term
+[2024-10-24 23:46:13 +0000] [769] [INFO] Worker exiting (pid: 769)
+[2024-10-24 23:46:13 +0000] [760] [INFO] Worker exiting (pid: 760)
+[2024-10-24 23:46:13 +0000] [551] [ERROR] Worker (pid:769) was sent SIGTERM!
+[2024-10-24 23:46:13 +0000] [551] [ERROR] Worker (pid:772) was sent SIGTERM!
+[2024-10-24 23:46:13 +0000] [551] [ERROR] Worker (pid:760) was sent SIGTERM!
+[2024-10-24 23:46:13 +0000] [551] [INFO] Shutting down: Master
+[2024-10-25 16:32:26 +0000] [552] [INFO] Starting gunicorn 23.0.0
+[2024-10-25 16:32:26 +0000] [552] [INFO] Listening at: unix:peak.sock (552)
+[2024-10-25 16:32:26 +0000] [552] [INFO] Using worker: sync
+[2024-10-25 16:32:26 +0000] [751] [INFO] Booting worker with pid: 751
+[2024-10-25 16:32:26 +0000] [756] [INFO] Booting worker with pid: 756
+[2024-10-25 16:32:26 +0000] [770] [INFO] Booting worker with pid: 770
