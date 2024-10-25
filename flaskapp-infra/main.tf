@@ -86,19 +86,19 @@ resource "aws_instance" "flaskapp_instance" {
 
     # Configure NGINX
     sudo rm /etc/nginx/sites-enabled/default
-    cat <<EOG | sudo tee /etc/nginx/sites-available/flaskapp
+    cat <<EOG | sudo tee /etc/nginx/sites-available/flaskapp.conf
     server {
       listen 80;
      # server_name flaskapp.roycebradley.com www.flaskapp.roycebradley.com;
 
       location / {
       #  return 301 https://\$host\$request_uri;
-      proxy_pass http://unix:/home/ubuntu/FlaskApp/peak.sock;
+      proxy_pass http://unix:/home/ubuntu/FlaskApp/hike/peak.sock;
       include proxy_params;
       }
 
       location /health {
-        proxy_pass http://unix:/home/ubuntu/FlaskApp/peak.sock;
+        proxy_pass http://unix:/home/ubuntu/FlaskApp/hike/peak.sock;
         include proxy_params;
       }
     }
