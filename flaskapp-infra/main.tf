@@ -15,7 +15,8 @@ resource "aws_instance" "flaskapp_instance" {
   user_data = <<-EOF
     #!/bin/bash
     sudo apt update
-    sudo apt install -y nginx python3-pip python3-venv snapd acl
+    sudo apt install -y nginx python3-pip python3-venv snapd acl git
+
     sudo snap install core
     sudo snap refresh core
     sudo snap install --classic certbot
@@ -27,30 +28,11 @@ resource "aws_instance" "flaskapp_instance" {
     sudo setfacl -m u:www-data:rx /home/ubuntu/FlaskApp
 
     # Create project directory
-    mkdir -p /home/ubuntu/FlaskApp
+    git clone https://github.com/roycebradley/FlaskApp.git
     cd /home/ubuntu/FlaskApp
     sudo chown -R ubuntu:www-data /home/ubuntu/FlaskApp
-    mkdir logs
-    touch /logs/flask_app.log
-    mkdir templates
 
-    # Create HTML template for flask app to use
 
-    cat <<EOG | sudo tee /home/unbutu/FlaskApp/templates/index.html
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Reverse Proxy</title>
-        <h1>Hello! This page is using a reverse proxy!</h1>
-        <img src='https://t4.ftcdn.net/jpg/09/28/91/71/360_F_928917171_jdoZKeFlvdqld4ING57BDt9xDHf5PUpy.jpg' alt='thumbs up'>
-    </head>
-    <body>
-
-    </body>
-    </html>
-    EOG
 
     # Setup Python environment
     python3 -m venv venv
@@ -58,38 +40,6 @@ resource "aws_instance" "flaskapp_instance" {
 
     # Install Flask, Gunicorn
     pip install flask gunicorn
-
-    # Create Flask application
-    cat <<EOG | sudo tee /home/ubuntu/FlaskApp/peak.py
-    from flask import Flask, render_template, jsonify
-    import logging
-
-    logging.basicConfig(filename='/home/ubuntu/FlaskApp/logs/flask_app.log', level=logging.INFO)
-
-    app = Flask(__name__)
-
-    @app.route('/')
-    def index():
-        app.logger.info("Index page accessed")
-        return render_template('index.html')
-
-    @app.route('/health')
-    def health():
-        app.logger.info('Health Check')
-        return jsonify({"status": "healthy"}), 200
-
-    if __name__ == "__main__":
-        app.run(host="0.0.0.0", port=5000)
-    EOG
-
-    # Create WSGI file
-    cat <<EOG | sudo tee /home/ubuntu/FlaskApp/wsgi.py
-    from peak import app
-
-    if __name__ == '__main__':
-        app.run()
-    EOG
-
 
 
     # Create Gunicorn service for Flask app
@@ -102,7 +52,7 @@ resource "aws_instance" "flaskapp_instance" {
     User=ubuntu
     Group=www-data
     WorkingDirectory=/home/ubuntu/FlaskApp
-    ExecStart=/home/ubuntu/FlaskApp/venv/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/FlaskApp/peak.sock -m 007 wsgi:app
+    ExecStart=/home/ubuntu/FlaskApp/venv/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/FlaskApp/hike/peak.sock -m 007 wsgi:app
 
     [Install]
     WantedBy=multi-user.target
@@ -118,7 +68,7 @@ resource "aws_instance" "flaskapp_instance" {
     User=ubuntu
     Group=www-data
     WorkingDirectory=/home/ubuntu/FlaskApp
-    ExecStart=/home/ubuntu/FlaskApp/venv/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/FlaskApp/peak.sock -m 007 wsgi:app
+    ExecStart=/home/ubuntu/FlaskApp/venv/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/FlaskApp/hike/peak.sock -m 007 wsgi:app
     [Install]
     WantedBy=multi-user.target
     EOG
