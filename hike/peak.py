@@ -3,7 +3,7 @@ import logging
 
 
 #logging.basicConfig(filename='flaskapp2.log', format="%(levelname)s:%(name)s:%(message)s")
-logging.basicConfig(filename='/logs/flask_app.log', level=logging.INFO)
+logging.basicConfig(filename='logs/flask_app.log', level=logging.INFO)
 
 app = Flask(__name__)
 
