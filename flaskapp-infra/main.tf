@@ -28,9 +28,12 @@ resource "aws_instance" "flaskapp_instance" {
     sudo setfacl -m u:www-data:rx /home/ubuntu/FlaskApp
 
     # Create project directory
+    cd /home/ubuntu/
     git clone https://github.com/roycebradley/FlaskApp.git
     cd /home/ubuntu/FlaskApp
     sudo chown -R ubuntu:www-data /home/ubuntu/FlaskApp
+    mkdir /home/ubuntu/FlaskApp/hike/logs
+    touch /home/ubuntu/FlaskApp/hike/logs/flask_app.log
 
 
 
@@ -51,7 +54,7 @@ resource "aws_instance" "flaskapp_instance" {
     [Service]
     User=ubuntu
     Group=www-data
-    WorkingDirectory=/home/ubuntu/FlaskApp
+    WorkingDirectory=/home/ubuntu/FlaskApp/hike
     ExecStart=/home/ubuntu/FlaskApp/venv/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/FlaskApp/hike/peak.sock -m 007 wsgi:app
 
     [Install]
@@ -67,7 +70,7 @@ resource "aws_instance" "flaskapp_instance" {
     [Service]
     User=ubuntu
     Group=www-data
-    WorkingDirectory=/home/ubuntu/FlaskApp
+    WorkingDirectory=/home/ubuntu/FlaskApp/hike
     ExecStart=/home/ubuntu/FlaskApp/venv/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/FlaskApp/hike/peak.sock -m 007 wsgi:app
     [Install]
     WantedBy=multi-user.target
